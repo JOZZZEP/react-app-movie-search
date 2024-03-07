@@ -37,7 +37,7 @@ const HomePage = () => {
   useEffect(() => {
     if (searchWord !== "" && searchOption === 1) {
       fetch(
-        `http://www.omdbapi.com/?apikey=ec779d97&s=${searchWord}&page=${page}&type=${
+        `https://www.omdbapi.com/?apikey=ec779d97&s=${searchWord}&page=${page}&type=${
           type === 1 ? "" : type === 2 ? "movie" : "series"
         }`
       )
@@ -54,7 +54,7 @@ const HomePage = () => {
           setIsLoading(false);
         });
     } else if (searchWord !== "" && searchOption === 2) {
-      fetch(`http://www.omdbapi.com/?apikey=ec779d97&i=${searchWord}`)
+      fetch(`https://www.omdbapi.com/?apikey=ec779d97&i=${searchWord}`)
         .then((response) => response.json())
         .then((res) => {
           if (res.Response == "True") {

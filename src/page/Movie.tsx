@@ -23,7 +23,7 @@ const MoviePage = () => {
   const [movieFromApi, setMovieFromApi] = useState<any>();
 
   useEffect(() => {
-    fetch(`http://www.omdbapi.com/?apikey=ec779d97&i=${imdbID}`)
+    fetch(`https://www.omdbapi.com/?apikey=ec779d97&i=${imdbID}`)
       .then((response) => response.json())
       .then((res) => {
         setMovieFromApi(res);
